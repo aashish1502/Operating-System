@@ -1,10 +1,15 @@
 
 
+typedef void(*constructor)();
+extern "C" constructor start_ctors;
+extern "C" constructor end_ctors;
+extern "C" void callConstructors()
+{
+    for(constructor* i = &start_ctors ; i != &end_ctors ; i++)
+    (*i)();
+}
+
 //pointer that points to the memory address of the display device
-
-
-
-
 void printf(char* str){
 
     unsigned short* VideoMemory = (unsigned short*)0xb8000;
