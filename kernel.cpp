@@ -28,6 +28,7 @@ void printf(char* str){
 extern "C" void kernelMain(void* multiboot_structure , uint32_t magicnumber){
 
     printf("This is an attemp to make an operating system -Aashish.");
+    printf("This is an attemp to make an operating system -Aashish.");
 
     GlobalDescriptorTable gdt;
 
