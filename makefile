@@ -34,3 +34,7 @@ mykernel.iso: mykernel.bin
 run: mykernel.iso
 	(killall VirtualBox && sleep 1 ) || true
 	VirtualBox --startvm "My Operating System" &
+
+.PHONY: clean
+clean:
+	rm -f $(objects) mykernel.bin mykernel.iso
