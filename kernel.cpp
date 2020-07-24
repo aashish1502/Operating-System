@@ -14,6 +14,8 @@ extern "C" void callConstructors()
 //pointer that points to the memory address of the display device
 void printf(char* str){
 
+
+
     static uint16_t* VideoMemory = (uint16_t*)0xb8000;
 
     for(int i = 0 ; str[i]!='\0' ; ++i)
