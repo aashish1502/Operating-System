@@ -1,6 +1,7 @@
 
 #include "types.h"
 #include "gdt.h"
+#include "interrupts.h"
 
 typedef void(*constructor)();
 extern "C" constructor start_ctors;
@@ -69,6 +70,11 @@ extern "C" void kernelMain(void* multiboot_structure , uint32_t magicnumber){
     printf("!@#$.");
 
     GlobalDescriptorTable gdt;
+    InterruptManager interrupts(&gdt);
+
+
+
+    interrupts.Activate();
 
     while(1);
 
