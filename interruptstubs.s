@@ -4,7 +4,7 @@
 
 .section .text
 
-.extern _ZN16InterruptManager15handleInterruptEhj
+.extern _ZN16InterruptManager15HandleInterruptEhj
 
 
 .macro HandleException num
@@ -75,7 +75,7 @@ int_bottom:
 
     pushl %esp
     push (interruptnumber)
-    call _ZN16InterruptManager15handleInterruptEhj
+    call _ZN16InterruptManager15HandleInterruptEhj
     add %esp, 6
     movl %eax, %esp
 

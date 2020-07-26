@@ -44,7 +44,7 @@ InterruptManager::InterruptManager(uint16_t hardwareInterruptOffset, GlobalDescr
     SetInterruptDescriptorTableEntry(0, CodeSegment, &InterruptIgnore, 0, IDT_INTERRUPT_GATE);
 
     SetInterruptDescriptorTableEntry(0x00, CodeSegment, &HandleException0x00 , 0, IDT_INTERRUPT_GATE);
-    SetInterruptDescriptorTableEntry(0x01, CodeSegment, &HandleException0x01, 0, IDT_INTERRUPT_GATE);
+    SetInterruptDescriptorTableEntry(0x01, CodeSegment, &HandleException0x01 , 0, IDT_INTERRUPT_GATE);
     SetInterruptDescriptorTableEntry(0x02, CodeSegment, &HandleException0x02 , 0, IDT_INTERRUPT_GATE);
     SetInterruptDescriptorTableEntry(0x03, CodeSegment, &HandleException0x03 , 0, IDT_INTERRUPT_GATE);
     SetInterruptDescriptorTableEntry(0x04, CodeSegment, &HandleException0x04 , 0, IDT_INTERRUPT_GATE);
