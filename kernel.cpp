@@ -1,7 +1,7 @@
 
 #include "types.h"
 #include "gdt.h"
-//#include "interrupts.h"
+#include "interrupts.h"
 
 typedef void(*constructor)();
 extern "C" constructor start_ctors;
@@ -69,12 +69,12 @@ extern "C" void kernelMain(void* multiboot_structure , uint32_t magicnumber){
     printf("This is an attemp to make an operating system -Aashish.\n");
     printf("!@#$.");
 
-    //GlobalDescriptorTable gdt;
-    //InterruptManager interrupts(&gdt);
+    GlobalDescriptorTable gdt;
+    InterruptManager interrupts(0x20,&gdt);
 
 
 
-    //interrupts.Activate();
+    interrupts.Activate();
 
     while(1);
 
