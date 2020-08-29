@@ -76,6 +76,7 @@ uint32_t KeyboardDriver::HandleInterrupt(uint32_t esp)
             case 0x23: if(Shift) printf("H"); else printf("h"); break;
             case 0x24: if(Shift) printf("J"); else printf("j"); break;
             case 0x25: if(Shift) printf("K"); else printf("k"); break;
+            case 0x26: if(Shift) printf("L"); else printf("l"); break;
             case 0x27: if(Shift) printf(":"); else printf(";"); break;
             case 0x28: if(Shift) printf("\""); else printf("'"); break;
 
