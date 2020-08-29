@@ -49,6 +49,8 @@ uint32_t KeyboardDriver::HandleInterrupt(uint32_t esp)
             case 0x17: if(Shift) printf("I"); else printf("i"); break;
             case 0x18: if(Shift) printf("O"); else printf("o"); break;
             case 0x19: if(Shift) printf("P"); else printf("p"); break;
+            case 0x1A: if(Shift) printf("{"); else printf("["); break;
+            case 0x1B: if(Shift) printf("}"); else printf("]"); break;
 
             case 0x1E: if(Shift) printf("A"); else printf("a"); break;
             case 0x1F: if(Shift) printf("S"); else printf("s"); break;
@@ -58,7 +60,8 @@ uint32_t KeyboardDriver::HandleInterrupt(uint32_t esp)
             case 0x23: if(Shift) printf("H"); else printf("h"); break;
             case 0x24: if(Shift) printf("J"); else printf("j"); break;
             case 0x25: if(Shift) printf("K"); else printf("k"); break;
-            case 0x26: if(Shift) printf("L"); else printf("l"); break;
+            case 0x27: if(Shift) printf(":"); else printf(";"); break;
+            case 0x28: if(Shift) printf("\""); else printf("'"); break;
 
             case 0x2C: if(Shift) printf("Z"); else printf("z"); break;
             case 0x2D: if(Shift) printf("X"); else printf("x"); break;
