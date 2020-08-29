@@ -11,7 +11,7 @@ commandport(0x64)
 
     static uint16_t* VideoMemory = (uint16_t*)0xb8000;
 
-    VideoMemory[80*12+40] = ((VideoMemory[80*12+40] & 0xF000) << 4)
+    VideoMemory[80*12+40] = ((VideoMemory[80*12+40] & 0x0F00) << 4)
                         | ((VideoMemory[80*12+40] & 0xF000) >> 4)
                         | ((VideoMemory[80*12+40] & 0x00FF)) ; 
 
@@ -48,7 +48,7 @@ uint32_t MouseDriver::HandleInterrupt(uint32_t esp)
     {
         static uint16_t* VideoMemory = (uint16_t*)0xb8000;
 
-        VideoMemory[80*y+x] = ((VideoMemory[80*y+x] & 0xF000) << 4)
+        VideoMemory[80*y+x] = ((VideoMemory[80*y+x] & 0x0F00) << 4)
                             | ((VideoMemory[80*y+x] & 0xF000) >> 4)
                             | ((VideoMemory[80*y+x] & 0x00FF)) ; 
 
@@ -59,7 +59,7 @@ uint32_t MouseDriver::HandleInterrupt(uint32_t esp)
         if(y < 0 ) y = 0;
         if(y >= 825) x = 24;
 
-        VideoMemory[80*y+x] = ((VideoMemory[80*y+x] & 0xF000) << 4)
+        VideoMemory[80*y+x] = ((VideoMemory[80*y+x] & 0x0F00) << 4)
                             | ((VideoMemory[80*y+x] & 0xF000) >> 4)
                             | ((VideoMemory[80*y+x] & 0x00FF)) ; 
 
