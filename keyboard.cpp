@@ -39,6 +39,21 @@ uint32_t KeyboardDriver::HandleInterrupt(uint32_t esp)
             case 0x0A: if(Shift) printf("("); else printf("9"); break;
             case 0x0B: if(Shift) printf(")"); else printf("0"); break;
 
+            case 0x52: printf("0"); break;
+            case 0x4F: printf("1"); break;
+            case 0x50: printf("2"); break;
+            case 0x51: printf("3"); break;
+            case 0x4B: printf("4"); break;
+            case 0x4C: printf("5"); break;
+            case 0x4D: printf("6"); break;
+            case 0x47: printf("7"); break;
+            case 0x48: printf("8"); break;
+            case 0x49: printf("9"); break;
+            case 0x37: printf("*"); break;
+            case 0x4A: printf("-"); break;
+            case 0x4E: printf("+"); break;
+            case 0x53: printf("."); break;
+
             case 0x10: if(Shift) printf("Q"); else printf("q"); break;
             case 0x11: if(Shift) printf("W"); else printf("w"); break;
             case 0x12: if(Shift) printf("E"); else printf("e"); break;
@@ -51,6 +66,7 @@ uint32_t KeyboardDriver::HandleInterrupt(uint32_t esp)
             case 0x19: if(Shift) printf("P"); else printf("p"); break;
             case 0x1A: if(Shift) printf("{"); else printf("["); break;
             case 0x1B: if(Shift) printf("}"); else printf("]"); break;
+            case 0x2B: if(Shift) printf("\\"); else printf("l"); break;
 
             case 0x1E: if(Shift) printf("A"); else printf("a"); break;
             case 0x1F: if(Shift) printf("S"); else printf("s"); break;
